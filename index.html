@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuentes de alimentación</title>
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/trabajo en susio/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/js.js"></script>
+</head>
+<body>
+
+    <!-- Icono de Flecha para volver al inicio -->
+    <a href="#hero"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+
+    <div id="container">
+
+        <!-- Barra de navegación superior -->
+        <nav>
+            <div class = "topnav" id="myTopnav">
+                <a href="#hero" class="active"><i class="fa fa-home" aria-hidden="true"></i>
+                Inicio</a>
+                <a href="#intro">Intro</a>
+                <a href="#tipos">Tipos</a>
+                <a href="#funcionamiento">Funcionamiento</a>
+                <a href="#instalacion">Instalación</a>
+                <a href="#marcas">Marcas</a>
+                <a href="javascript:void(0);" class="hamburguesa" onclick="menuHamburguesa()">
+                <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Hero Section con imagen de fondo fija y título -->
+        <section id="hero">
+            <h2>FUENTES DE ALIMENTACIÓN</h2>
+        </section>
+
+        <!-- Introducción a las fuentes de alimentación, con imagen y texto -->
+        <section id="intro">
+            <p>La fuente de alimentación es básicamente la fuente de energía eléctrica de un aparato
+            electrónico. Alimenta los circuitos de donde se conecta, transformando la corriente alterna
+            en corriente continua. Lo tienen tanto ordenadores, como televisores, como
+            cualquier otro aparato electrónico sin batería interna.</p>
+            <div class="grid2col">
+                <div class="column" id="fuentepc">
+                    <p>Fuente de PC</p>
+                    <img src="/img/fuentepc.png" >
+                </div>
+                <div class="column" id="fuentetv">
+                    <p>Fuente de TV</p>
+                    <img src="/img/fuentetv.png" >
+                </div>
+            </div>
+        </section>
+
+        <!-- Tipos de fuentes de alimentación, 1 bloque con 4 párrafos, 2 indentados y 2 imágenes -->
+        <section id="tipos">
+            <p>Existen 2 tipos de fuentes de alimentación, lineales y conmutadas.</p>
+            <p>- <strong>Lineales</strong>: Ya prácticamente ni se usan ya que son muy poco eficientes, se pierde gran cantidad de energía que se transforma en calor por la forma en que funcionan.</p>
+            <p>- <strong>Conmutadas</strong>: Es la que se usa para hacer las fuentes actuales. La más eficiente
+            tiene un 95% de eficiencia, mientras que las predeterminadas rondan el 80%
+            de eficiencia. Dentro de las conmutadas hay dos tipos de fuentes de
+            alimentación:</p>
+            <p id="apartado">&nbsp&nbsp• <strong>AT</strong> (Advanced Technology): Se introdujeron en los
+            años 80. Funcionaban igual que las de ahora, pero su estructura y los
+            componentes utilizados son diferentes. No permitían una CPU a 90º C
+            como las de ahora. Era menos segura ya que solo se apagaban al darle al
+            interruptor trasero de la fuente. El conector de poder era de 12 pines.
+            Actualmente está en desuso sustituida por la ATX.</p>
+            <p id="apartado">&nbsp&nbsp• <strong>ATX</strong> (Advanced Technology Extended): Se introdujeron
+            en el año 1995, por Intel. Son el formato de fuentes actuales. El conector de poder
+            al principio fue de 20 pines, pero más adelante se actualizaron a las v2.2 por
+            necesidad para placas más modernas a 24 pines, los pines actuales también.</p>
+            <div id="atvsatx">
+                <div class="atx">
+                    <p>ATX vs AT</p>
+                    <img src="/img/atxvsat.jpg">
+                </div>
+                <div class="atx2.2">
+                    <p>ATX 2.2 vs ATX</p>
+                    <img src="/img/atx2.2vsatx.gif">
+                </div>
+            </div>
+        </section>
+
+        <!-- Funcionamiento de las fuentes de alimentación -->
+        <section id="funcionamiento">
+            <h2><i class="fa fa-cog" aria-hidden="true"></i>
+            FUNCIONAMIENTO <i class="fa fa-cog" aria-hidden="true"></i></h2>
+            <p><strong>Lineales</strong>: Siguen el esquema transformador, rectificador, filtro, regulación y
+            salida. El transformador adapta los niveles de tensión y aisla. El rectificador convierte
+            la energía alterna en continua. El circuito del rectificador suele llevar el filtro de
+            condensador, que disminuye el rizado (corriente alterna que queda, después
+            de haber hecho el cambio a corriente continua). La estabilización de la tensión
+            se consigue con el regulador de tensión, que básicamente es un transistor que
+            actúa como resistencia para simular mayor o menor resistencia para regular el
+            voltaje. Este tipo de fuente es menos eficiente ya que en este proceso se
+            pierde mucha energía en forma de calor. En la salida puede que solo haya un
+            condensador para almacenar la energía sin dejar que salga mientras no esté
+            conectada a nada.</p>
+            <p><strong>Conmutadas</strong>: Siguen el esquema rectificador, conmutador, transformador,
+            otro rectificador y salida. Esta fuente transforma la energía mediante transistores en
+            conmutación. La regulación se obtiene del conmutador con un circuito PWM, que es una técnica
+            que cambia el ciclo de trabajo. El transformador hace lo mismo que en la lineal
+            aunque está colocado en otro lugar. El segundo rectificador convierte la señal
+            alterna que llega desde el transformador en corriente continua. Y la salida lo
+            mismo, suele ser un condensador, o también un circuito LC, que es un circuito
+            con un condensador integrado.</p>
+            <img src="/img/funcionamiento.jpg">
+        </section>
+
+        <!-- Instalación de las fuentes de alimentación, con un iframe y dos bloques con imágenes y texto -->
+        <section id="instalacion">
+            <div class="bloque1">
+                <img src="/img/instalarfuente.png" id="instalarfuente">
+                <p>Se instala en la parte trasera de la caja.
+                Normalmente abajo aunque cada vez se encuentra más en la parte de arriba.
+                Simplemente se coloca la fuente, dejando el botón y el enchufe de poder hacia
+                fuera, se atornilla desde atrás, normalmente con 4 tornillos.</p>
+                <p>Ahora hay que conectar todos los cables en su lugar en la placa base, tarjeta
+                gráfica y discos duros. Los cables SATA van al disco duro. El cable de 24 pines a
+                la placa base, junto con el cable de 4 u 8 (4+4) pines que alimenta a la CPU. Por
+                último el cable PCI-Express de la GPU de 4 + 2 pines, y ya estarían todos los
+                básicos conectados.</p>
+                <img src="/img/cablesfuente.jpg" id="cablesfuente">
+            </div>
+            <div id="bloque2">
+                <div class="textovideo">
+                    <p>Una vez conectados todos los cables, ya el equipo debería funcionar
+                    correctamente. Una fuente de alimentación no necesita Drivers ni Sotfware
+                    adicional. Para más información, este vídeo exhaustivo de como montar una
+                    fuente de alimentación, modular en este caso aunque el proceso sería igual.</p>
+                </div>
+                <div id="video" class="iframe-responsive">
+                    <iframe class="iframe-content" width="560" height="315" src="https://www.youtube.com/embed/-WrWrfg6azw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Marcas de fuentes de alimentación en grid de 4 columnas -->
+        <section id="marcas">
+            <h2>MARCAS</h2>
+            <div id="marcasfamosas" class="grid4col">
+
+                <div class="col4" id="coolermaster">
+                    <img src="/img/coolermaster.png">
+                    <p>Fabrica de las mejores fuentes de alimentación en relación calidad-precio.
+                    Estéticamente estas fuentes son de las más bonitas del mercado junto con las Corsair.</p>
+                    <a href="https://www.coolermaster.com/" target="_blank" class="button">Página oficial</a>
+                </div>
+
+                <div class="col4" id="corsair">
+                    <img src="/img/Corsairlogo.png">
+                    <p>Fabrica las mejores fuentes de alimentación modulares. Estas son las que traen ranuras
+                    para los cables, y tú colocas y ordenas los que quieras a tu gusto.</p>
+                    <a href="https://www.corsair.com/es/es/" target="_blank" class="button">Página oficial</a>
+                </div>
+                
+                <div class="col4" id="seasonic">
+                    <img src="/img/seasonic logo.png">
+                    <p>Esta empresa solo fabrica fuentes de alimentación. Sus fuentes son las mejores en 
+                    certificación energética. Sus fuentes rondan los 80+ de rendimiento.</p>
+                    <a href="https://seasonic.com/" target="_blank" class="button">Página oficial</a>
+                </div>
+
+                <div class="col4" id="bequiet">
+                    <img src="/img/Bequietlogo.png">
+                    <p>Actualmente es una de las mejores marcas de fuentes de alimentación. Como su nombre 
+                    indica, son las fuentes más silenciosas del mercado y también de las mejores en 
+                    rendimiento.</p>
+                    <a href="https://www.bequiet.com/es" target="_blank" class="button">Página oficial</a>
+                    <!--<button><link a href="https://www.bequiet.com/es">Página oficial</button> -->
+                </div>
+            </div>
+        </section>
+        
+        
+        <section></section>
+        <footer id="footer">
+            <h2>Esta página ha sido diseñada por Sergio García Gómez</h2>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: navbar;
+    src: url("../fonts/MontserratAlternates-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: titulo;
+    src: url("../fonts/KaushanScript.ttf");
+}
+
+@font-face {
+    font-family: body;
+    src: url("../fonts/Philosopher-Regular.ttf");
+}
